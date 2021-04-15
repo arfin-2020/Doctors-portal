@@ -10,20 +10,21 @@ const Navbar = () => {
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+        
         <li class="nav-item">
-          <a class="nav-link ms-5 active" aria-current="page" href="#">About</a>
+          <a class="nav-link ms-5 deactive" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ms-5 deactive" aria-current="page" href="#">Home</a>
+          <a class="nav-link ms-5 deactive" aria-current="page" href="/appointment/dashboard">Deshboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ms-5 deactive" aria-current="page" href="#">Dental Services</a>
+          <a class="nav-link ms-5 deactive" aria-current="page" href="/appointment">Appointment</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ms-5 deactive text-white" aria-current="page" href="#">Reviews</a>
+          <a class="nav-link ms-5 deactive text-white" aria-current="page" href="/login">login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ms-5 deactive text-white" aria-current="page" href="#">Blogs</a>
+          <a class="nav-link ms-5 deactive text-white" aria-current="page" href="/appointment/allpatients">Patients</a>
         </li>
         <li class="nav-item">
           <a class="nav-link ms-5 deactive text-white" aria-current="page" href="#">Contact Us</a>
