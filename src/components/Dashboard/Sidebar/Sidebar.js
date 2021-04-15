@@ -16,7 +16,7 @@ const Sidebar = () => {
             // body: JSON.stringify({ email: loggedInUser.email})
             body: JSON.stringify({ email: loggedInUser.email })
         })
-        .then(res =>res.json)
+        .then(res =>res.json())
         .then(data =>setIsDoctor(data))
     },[])
     return (
