@@ -19,6 +19,7 @@ const Sidebar = () => {
         .then(res =>res.json())
         .then(data =>setIsDoctor(data))
     },[])
+    
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{height:"100vh"}}>
             <ul className="list-unstyled">
@@ -32,7 +33,7 @@ const Sidebar = () => {
                             <FontAwesomeIcon icon={faCalendar} /> <span>Appointment</span> 
                         </Link>
                     </li>
-               { isDoctor && <div>
+              
                     
                     <li>
                         <Link style={{ textDecoration: 'none',color:'white' }} to="/appointment/allpatients" className="text-white">
@@ -54,7 +55,7 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faCog} /><span>Setting</span>
                         </Link>
                     </li>
-                </div>}
+               
 
                     </ul> 
            

@@ -4,7 +4,7 @@ const BlogPost = (props) => {
     const {title, description, author, authorImg , date} = props.blog;
     return (
         <div className="card shadow-sm col-md-4">
-        <div className="card-header d-flex  align-items-center">
+        <div className="card-header d-flex align-items-center">
             <img className="mx-3" src={authorImg} alt="" width="60"/>
             <div>
                 <h6 className="text-primary">{author}</h6>
