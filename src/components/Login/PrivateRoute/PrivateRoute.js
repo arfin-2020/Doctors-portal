@@ -35,7 +35,6 @@ const PrivateRoute = ({children, ...rest}) => {
         )
       }
     />
-       
     );
 };
 

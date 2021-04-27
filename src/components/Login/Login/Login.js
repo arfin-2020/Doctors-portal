@@ -27,14 +27,14 @@ if (firebase.apps.length === 0) {
       console.log(errorMessage);
     });
   }
-  const handleGoogleSignOut = () =>{
-    firebase.auth().signOut().then(() => {
-      // Sign-out successful.
-    }).catch((error) => {
-      // An error happened.
-    });
-  
-  }
+  //google signout for later used
+  // const handleGoogleSignOut = () =>{
+  //   firebase.auth().signOut().then(() => {
+  //     // Sign-out successful.
+  //   }).catch((error) => {
+  //     // An error happened.
+  //   });
+  // }
   
   const storeAuthToken = () => {
     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
@@ -64,9 +64,9 @@ if (firebase.apps.length === 0) {
           <div className="from-group mt-5">
             <button className="button-style" onClick={handleGoogleSignIn}>Google Sign in</button>
           </div>
-          <div className="from-group mt-5">
+          {/* <div className="from-group mt-5">
             <button className="button-style" onClick={handleGoogleSignOut}>Google SignOut</button>
-          </div>
+          </div> */}
         </div>
         <div className="col-md-6 d-md-block align-self-end">
           <img className="img-fluid" src={LoginBg} alt="" />

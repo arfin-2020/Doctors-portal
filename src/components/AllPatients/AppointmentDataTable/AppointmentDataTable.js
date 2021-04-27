@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AppointmentDataTable = ({appointments}) => {
+    console.log(appointments)
     return (
         <table className="table table-borderless">
             <thead>

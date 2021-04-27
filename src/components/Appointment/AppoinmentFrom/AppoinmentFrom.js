@@ -15,15 +15,15 @@ const customStyles = {
   };
 Modal.setAppElement('#root')
 
-const AppoinmentFrom = ({modalIsOpen,closeModal,AppoinmentSubject,date}) => {
-    const { register, handleSubmit,formState: { errors } } = useForm();
+const AppoinmentFrom = ({modalIsOpen,closeModal,AppoinmentOn,date}) => {
+    const { register, handleSubmit, errors } = useForm();
+
   const onSubmit = data => {
-    //   console.log(data)
-      data.service = AppoinmentSubject;
+      data.service = AppoinmentOn;
       data.date = date;
       data.created= new Date();
 
-    fetch('http://localhost:5000/addAppointment',{
+    fetch('http://localhost:5050/addAppointment',{
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(data)
@@ -32,11 +32,11 @@ const AppoinmentFrom = ({modalIsOpen,closeModal,AppoinmentSubject,date}) => {
     .then(success =>{
         if(success){
             closeModal();
-            // alert('Appointment Created Successfully.');
+            //  alert('Appointment created successfully.');
         }
     })
-    
-  };
+  }
+
     return (
         <div>
             <Modal
@@ -45,7 +45,7 @@ const AppoinmentFrom = ({modalIsOpen,closeModal,AppoinmentSubject,date}) => {
             style={customStyles}
             contentLabel="Example Modal"
             >
-                <h2 className="text-color text-center">{AppoinmentSubject}</h2>
+                <h2 className="text-color text-center">{AppoinmentOn}</h2>
                 <p className = "text-center">Appoinment date is on {date.toDateString()}</p>
                 <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">

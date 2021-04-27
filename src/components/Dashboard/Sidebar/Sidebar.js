@@ -10,10 +10,9 @@ const Sidebar = () => {
     const [isDoctor,setIsDoctor] = useState(false);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/isDoctor',{
+        fetch('http://localhost:5050/isDoctor',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
-            // body: JSON.stringify({ email: loggedInUser.email})
             body: JSON.stringify({ email: loggedInUser.email })
         })
         .then(res =>res.json())
@@ -28,37 +27,36 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span> 
                     </Link>
                 </li>
+                
                 <li>
-                        <Link style={{ textDecoration: 'none',color:'white' }} to="/appointment" className="text-white">
+                    <Link style={{ textDecoration: 'none',color:'white' }} to="/appointment" className="text-white">
                             <FontAwesomeIcon icon={faCalendar} /> <span>Appointment</span> 
-                        </Link>
-                    </li>
+                    </Link>
+                </li>
               
-                    
-                    <li>
-                        <Link style={{ textDecoration: 'none',color:'white' }} to="/appointment/allpatients" className="text-white">
+                <li>
+                    <Link style={{ textDecoration: 'none',color:'white' }} to="/appointment/allpatients" className="text-white">
                             <FontAwesomeIcon icon={faUsers} /> <span>Patients</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link style={{ textDecoration: 'none',color:'white' }} to="/doctor/prescriptions" className="text-white">
-                            <FontAwesomeIcon icon={faFileAlt} /> <span>Prescriptions</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link style={{ textDecoration: 'none',color:'white' }} to="/addDoctor" className="text-white" >
-                        <FontAwesomeIcon icon={faUser} /><span>Add Doctor</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link style={{ textDecoration: 'none',color:'white' }} to="/doctor/setting" className="text-white" >
-                        <FontAwesomeIcon icon={faCog} /><span>Setting</span>
-                        </Link>
-                    </li>
-               
+                    </Link>
+                </li>
 
-                    </ul> 
-           
+                <li>
+                    <Link style={{ textDecoration: 'none',color:'white' }} to="/doctor/prescriptions" className="text-white">
+                            <FontAwesomeIcon icon={faFileAlt} /> <span>Prescriptions</span>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link style={{ textDecoration: 'none',color:'white' }} to="/addDoctor" className="text-white" >
+                        <FontAwesomeIcon icon={faUser} /><span>Add Doctor</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link style={{ textDecoration: 'none',color:'white' }} to="/doctor/setting" className="text-white" >
+                        <FontAwesomeIcon icon={faCog} /><span>Setting</span>
+                     </Link>
+                </li>
+            </ul> 
             <div>
                 <Link  to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
             </div>

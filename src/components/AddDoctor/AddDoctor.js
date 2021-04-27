@@ -14,13 +14,14 @@ const AddDoctor = () => {
        newInfo[e.target.name] = e.target.value;
        setInfo(newInfo);
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault()
         const formData = new FormData()
         formData.append('file', file)
         formData.append('name', info.name)
         formData.append('email', info.email)
       
-        fetch('http://localhost:5000/addADoctor', {
+        fetch('http://localhost:5050/addADoctor', {
           method: 'POST',
           body: formData
         })
