@@ -5,7 +5,7 @@ import AppointmentDataTable from '../AppointmentDataTable/AppointmentDataTable';
 const AllPatients = () => {
  const [appointments, setAppointments] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5050/appointments')
+        fetch('https://pure-ravine-43373.herokuapp.com/appointments')
             .then(res => res.json())
             .then(data => setAppointments(data))
     }, [])

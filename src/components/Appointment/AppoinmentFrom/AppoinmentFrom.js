@@ -23,7 +23,7 @@ const AppoinmentFrom = ({modalIsOpen,closeModal,AppoinmentOn,date}) => {
       data.date = date;
       data.created= new Date();
 
-    fetch('http://localhost:5050/addAppointment',{
+    fetch('https://pure-ravine-43373.herokuapp.com/addAppointment',{
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(data)
