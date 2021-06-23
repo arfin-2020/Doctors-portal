@@ -1,9 +1,9 @@
 import React from 'react';
-import './Appoinment.css'
 import doctor from '../../../images/doctorvai.png';
+import './Appoinment.css';
 const Appoinment = () => {
     return (
-        <div className = 'Appoinment'>
+        <div className = 'Appoinment w-75 d-flex justify-content-center' >
             <div className="row">
                 <div className="col-md-6">
                     <img src={doctor} className = 'img-fluid' alt="" />
